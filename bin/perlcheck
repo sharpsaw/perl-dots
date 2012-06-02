@@ -1,4 +1,5 @@
 #!/usr/bin/env perl
+## Like a souped-up `perl -c`
 use warnings;
 use strict;
 
