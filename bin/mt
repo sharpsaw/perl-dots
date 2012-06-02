@@ -1,2 +1,3 @@
 #!/bin/sh -xe
+## make test "$@"
 make test "$@"
