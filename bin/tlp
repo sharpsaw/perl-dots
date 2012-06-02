@@ -1,0 +1,3 @@
+#!/bin/sh -xe
+## Part of Test::Less
+test-less --prove "$@"
