@@ -1,0 +1,6 @@
+if ($cond && 1 or two()) {
+    do_something;
+}
+becomes:
+do_something
+    if $cond && 1 or two();
