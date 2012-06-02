@@ -1,2 +1,3 @@
 #!/bin/sh -xe
+## perl Makefile.PL, respects `$PMF_ARGS` and passed-in args.
 perl Makefile.PL $PMF_ARGS "$@"
