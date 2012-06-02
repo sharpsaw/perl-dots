@@ -1,4 +1,5 @@
 #!/usr/bin/perl -nw
+## Colorize package/sub stuff from a .pm (also `<leader>gs` in vim)
 use strict;
 # Blue is too dark for dark terminals:
 my @legiblecolors = qw(31 32 33    35 36);
