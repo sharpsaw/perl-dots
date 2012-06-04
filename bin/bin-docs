@@ -1,0 +1,12 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+for my $script_name (sort glob("bin/*")) {
+    my ($short_name) = ($script_name =~ /bin\/(.+)/);
+    open my $file, $script_name or die $!;
+    my $bangpath = <$file>;
+    my $docline = <$file>;
+    $docline =~ s/^## //;
+    chomp $docline;
+    printf "* %10s (%s)\n", $short_name, $docline;
+}
