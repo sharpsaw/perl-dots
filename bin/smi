@@ -1,3 +1,2 @@
 #!/bin/sh -xe
-## sudo make install
 sudo make install "$@"

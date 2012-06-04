@@ -1,3 +1,2 @@
 #!/bin/sh -xe
-## prove -lv "$@"
 prove -lv "$@"

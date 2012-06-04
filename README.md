@@ -6,15 +6,16 @@ Perl-related dotfiles and scripts for `...`
 Perl CLI Stuff
 --------------
 
-*    flip-if - Switch "if ($cond) { stmt; }" to "stmt if $cond;" (and back!)
-*   grepsubs - Colorize package/sub stuff from a .pm (also `<leader>gs` in vim)
-*         mt - make test "$@"
-*  perlcheck - Like a souped-up `perl -c`
-*        plv - prove -lv "$@"
-*        pmf - perl Makefile.PL, respects `$PMF_ARGS` and passed-in args.
-*        smi - sudo make install
-*         tl - test-less (Part of Test::Less)
-*        tlp - test-less --prove (Part of Test::Less)
+*   bin-docs (use strict;)
+*    flip-if (Switch "if ($cond) { stmt; }" to "stmt if $cond;" (and back!))
+*   grepsubs (Colorize package/sub stuff from a .pm (also `<leader>gs` in vim))
+*         mt (make test "$@")
+*  perlcheck (Like a souped-up `perl -c`)
+*        plv (prove -lv "$@")
+*        pmf (perl Makefile.PL $PMF\_ARGS "$@")
+*        smi (sudo make install "$@")
+*         tl (test-less "$@" # (Part of Test::Less))
+*        tlp (test-less --prove "$@" # (Part of Test::Less))
 
 Vim Stuff
 ---------
