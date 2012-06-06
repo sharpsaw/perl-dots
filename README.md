@@ -6,6 +6,11 @@ Perl-related dotfiles and scripts for `...`
 Perl CLI Stuff
 --------------
 
+<!--
+Requires: https://github.com/sharpsaw/perl-dots (for its bin/bin-docs)
+Update by having sharpsaw/perl-dots then yy@" on the next line:
+jjV}k!bin-docs
+-->
 *   bin-docs (use strict;)
 *    flip-if (Switch "if ($cond) { stmt; }" to "stmt if $cond;" (and back!))
 *   grepsubs (Colorize package/sub stuff from a .pm (also `<leader>gs` in vim))
