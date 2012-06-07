@@ -1,12 +1,15 @@
 #!/usr/bin/env perl
+## Auto-doc'er for `bin/` scripts!
 use strict;
 use warnings;
 for my $script_name (sort glob("bin/*")) {
     my ($short_name) = ($script_name =~ /bin\/(.+)/);
+    next if $short_name =~ /^_/;
     open my $file, $script_name or die $!;
     my $bangpath = <$file>;
     my $docline = <$file>;
-    $docline =~ s/^## //;
+    $docline =~ s/^#+ //;
+    $docline =~ s/_/\\&/g;
     chomp $docline;
     printf "* %10s (%s)\n", $short_name, $docline;
 }

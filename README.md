@@ -1,7 +1,8 @@
 perl-dots
 =========
 
-Perl-related dotfiles and scripts for `...`
+Perl-related dotfiles and scripts for
+[`...`](http://github.com/ingydotnet/....git)
 
 Perl CLI Stuff
 --------------
@@ -11,13 +12,17 @@ Requires: https://github.com/sharpsaw/perl-dots (for its bin/bin-docs)
 Update by having sharpsaw/perl-dots then yy@" on the next line:
 jjV}k!bin-docs
 -->
-*   bin-docs (use strict;)
+*   bin-docs (Auto-doc'er for `bin/` scripts!)
 *    flip-if (Switch "if ($cond) { stmt; }" to "stmt if $cond;" (and back!))
 *   grepsubs (Colorize package/sub stuff from a .pm (also `<leader>gs` in vim))
+*         mi (make all install && rm -f Makefile.old)
+*         mp (make purge "$@")
 *         mt (make test "$@")
+*        mtb (Make tarball (from Makefile.PL))
 *  perlcheck (Like a souped-up `perl -c`)
+*      pfunk (perl -MConfig -MYAML -e "print Dump \%Config" | vim -)
 *        plv (prove -lv "$@")
-*        pmf (perl Makefile.PL $PMF\_ARGS "$@")
+*        pmf (perl Makefile.PL $PMF\&ARGS "$@")
 *        smi (sudo make install "$@")
 *         tl (test-less "$@" # (Part of Test::Less))
 *        tlp (test-less --prove "$@" # (Part of Test::Less))
