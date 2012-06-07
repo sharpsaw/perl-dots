@@ -1,2 +1,3 @@
 #!/bin/bash -xe
-${VISUAL:-$EDITOR:-vim} $(perldoc -l $1) "$@"
+## Edit the Foo.pm that perl finds via -MFoo
+${VISUAL:-$EDITOR:-vim} $(perl -M$1 -e "print \$INC{'$1.pm'}")
