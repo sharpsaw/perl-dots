@@ -1,0 +1,2 @@
+#!/bin/sh -xe
+perl -MConfig -MYAML -e "print Dump \%Config" | vim -
