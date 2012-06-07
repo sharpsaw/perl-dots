@@ -1,7 +1,5 @@
-vim-pm() { ## Edit a Perl module
-    ${VISUAL:-$EDITOR:-vim} $(perldoc -l $1)
-}
 cd-pm() { ## Go to a .pm's directory
     cd $(dirname $(perldoc -l $1))
 }
+
 # vim:ft=zsh

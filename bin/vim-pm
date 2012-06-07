@@ -1,0 +1,2 @@
+#!/bin/bash -xe
+${VISUAL:-$EDITOR:-vim} $(perldoc -l $1) "$@"
