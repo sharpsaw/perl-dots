@@ -28,15 +28,18 @@ EOT
     fi
 }
 
+_perl_use_module() {
+    perl -M$1 -e 1
+}
+
 assert-perl-module() {
-    perl -M$1 -e 1 ||
-        cpanm $1
+    _perl_use_module $1 || cpanm $1
+    _perl_use_module $1
 }
 assert-perl-modules() {
     for n in "$@"; do
         assert-perl-module $n
     done
 }
-
 
 # vim:ft=zsh
