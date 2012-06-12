@@ -2,4 +2,41 @@ cd-pm() { ## Go to a .pm's directory
     cd $(dirname $(perldoc -l $1))
 }
 
+cpanm() {
+    if ! type cpanm >/dev/null 2>&1; then
+        mkdir -p ~/bin && cd ~/bin
+        curl -LO http://xrl.us/cpanm
+        chmod +x cpanm
+        hash -r
+    fi
+
+    # Robustness level: Medium-Low.
+    if expr "$PERL_CPANM_OPT" : '.*--sudo' >/dev/null ||
+        expr "$PERL5LIB" : ".*$HOME/perl5" >/dev/null; then
+        command cpanm "$@"
+    else
+        cat <<EOT
+[31;1mInteresting[0m.
+
+\$PERL_CPANM_OPT == '$PERL_CPANM_OPT' (no --sudo in it) and
+\$PERL5LIB == '$PERL5LIB' (no $HOME/perl5 in it).
+
+You can either set one of these two and re-run: cpanm "$@"
+Or tell rking about your PERL5LIB at perl-dots@sharpsaw.org
+(or find him on freenode IRC as 'rking')
+EOT
+    fi
+}
+
+assert-perl-module() {
+    perl -M$1 -e 1 ||
+        cpanm $1
+}
+assert-perl-modules() {
+    for n in "$@"; do
+        assert-perl-module $n
+    done
+}
+
+
 # vim:ft=zsh
