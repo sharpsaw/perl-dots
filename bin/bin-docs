@@ -8,8 +8,10 @@ for my $script_name (sort glob("bin/*")) {
     open my $file, $script_name or die $!;
     my $bangpath = <$file>;
     my $docline = <$file>;
-    $docline =~ s/^#+ //;
+    $docline = <$file> if $docline =~ /#\s*encoding: /; # optional Ruby directive
+    my $backtick = '';
+    $backtick = '`' unless $docline =~ s/^#+ //;
     $docline =~ s/_/\\&/g;
     chomp $docline;
-    printf "* %10s (%s)\n", $short_name, $docline;
+    print "* `$short_name` ⇒ $backtick$docline$backtick\n";
 }
