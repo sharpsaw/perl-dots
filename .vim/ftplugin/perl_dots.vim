@@ -2,6 +2,9 @@
 let b:undo_ftplugin = "setlocal fo< com< cms< inc< inex< def< isf< kp<" .
 	    \	      " | unlet! b:browsefilter"
 
+" delimitMate doesn't optimize so well with Perl
+let b:delimitMate_autoclose = 0
+
 " Sweet keymaps:
 
 " Ctrl+/ for arrow (which you have to type way too much).
