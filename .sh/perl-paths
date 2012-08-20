@@ -1,0 +1,9 @@
+if [ -d ~/perl5 ]; then
+    ...path-prepend ~/perl5/bin
+    if [ -z "$PERL5LIB" ]; then
+        PERL5LIB=$HOME/perl5/lib
+    else
+        PERL5LIB="$HOME/perl5/lib:$PERL5LIB"
+    fi
+fi
+# vim:ft=sh
