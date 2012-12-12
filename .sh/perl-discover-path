@@ -1,1 +1,2 @@
 [ -d ~/perl5/bin ] && ...path-prepend ~/perl5/bin
+[ -d ~/local/lib/perl5 ] && ...path-prepend ~/local/lib/perl5
