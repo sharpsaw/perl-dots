@@ -11,7 +11,8 @@ for my $script_name (sort glob("bin/*")) {
     $docline = <$file> if $docline =~ /#\s*encoding: /; # optional Ruby directive
     my $backtick = '';
     $backtick = '`' unless $docline =~ s/^#+ //;
-    $docline =~ s/_/\\&/g;
+    $docline =~ s/"\$@"/<args>/g;
+    $docline =~ s/_/\_/g;
     chomp $docline;
     print "* `$short_name` ⇒ $backtick$docline$backtick\n";
 }
