@@ -1,0 +1,3 @@
+#!/bin/sh -xe
+curl -L http://cpanmin.us | perl - App::cpanminus
+cpanm --local-lib=~/perl5 local::lib
