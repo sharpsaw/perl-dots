@@ -48,7 +48,7 @@ au BufRead,BufNewFile *.t set ft=perl
 let &path = "lib," . &path
 
 " Use ':' in Ctrl+p/Ctrl+n/etc.:
-set isfname+=: iskeyword+=:
+set isfname+=:
 
 " For the K command:
 setlocal keywordprg=perldoc
