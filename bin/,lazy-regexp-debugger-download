@@ -1,0 +1,5 @@
+#!/bin/sh -xe
+cd /tmp
+mkdir Regexp && cd Regexp
+wget http://cpansearch.perl.org/src/DCONWAY/Regexp-Debugger-0.001012/lib/Regexp/Debugger.pm
+: Now use -I/tmp/ or PERL5LIB=/tmp
